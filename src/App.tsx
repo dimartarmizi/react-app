@@ -1,21 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import '@/App.css'
-import routes from '@/routes/routes';
-import Navbar from '@/components/Navbar';
-import { Suspense } from 'react';
+import '@tabler/core/dist/css/tabler.min.css'
+import '@tabler/core/dist/css/tabler-themes.min.css'
+import '@tabler/core/dist/js/tabler.min.js'
+import Footer from "@/layouts/Footer";
+import Navbar from "@/layouts/Navbar";
+import Setting from "@/layouts/Setting";
+
+import AppRouter from './AppRouter';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          {routes.map(route => (
-            <Route key={route.path} path={route.path} element={route.element} />
-          ))}
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <>
+      <div className="page">
+        <Navbar />
+        <div className="page-wrapper">
+          <AppRouter />
+          <Footer />
+        </div>
+      </div>
+      <Setting />
+    </>
   )
 }
 
