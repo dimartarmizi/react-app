@@ -37,7 +37,7 @@ export default function Footer() {
                             <ul className="list-inline list-inline-dots mb-0">
                                 <li className="list-inline-item">
                                     Copyright © 2025
-                                    <a href="." className="link-secondary">
+                                    <a href="." className="link-secondary ms-1">
                                         Tabler
                                     </a>
                                     . All rights reserved.

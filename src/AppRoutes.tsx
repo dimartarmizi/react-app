@@ -6,42 +6,47 @@ import 'nprogress/nprogress.css';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BlankPage from './pages/BlankPage';
+import TestApiPage from './pages/TestApiPage';
 
 const routes = [
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-  {
-    path: '/about',
-    element: <AboutPage />,
-  },
-  {
-    path: '/blank',
-    element: <BlankPage />,
-  },
+	{
+		path: '/',
+		element: <HomePage />,
+	},
+	{
+		path: '/about',
+		element: <AboutPage />,
+	},
+	{
+		path: '/blank',
+		element: <BlankPage />,
+	},
+	{
+		path: '/test-api',
+		element: <TestApiPage />,
+	},
 ];
 
 function AppRoutes() {
-  const location = useLocation();
+	const location = useLocation();
 
-  useEffect(() => {
-    NProgress.start();
-    NProgress.set(0.4);
-    NProgress.inc();
-    NProgress.done();
-    return () => {
-      NProgress.done();
-    };
-  }, [location]);
+	useEffect(() => {
+		NProgress.start();
+		NProgress.set(0.4);
+		NProgress.inc();
+		NProgress.done();
+		return () => {
+			NProgress.done();
+		};
+	}, [location]);
 
-  return (
-    <Routes>
-      {routes.map(({ path, element }, index) => (
-        <Route key={index} path={path} element={element} />
-      ))}
-    </Routes>
-  );
+	return (
+		<Routes>
+			{routes.map(({ path, element }, index) => (
+				<Route key={index} path={path} element={element} />
+			))}
+		</Routes>
+	);
 }
 
 export default AppRoutes;

@@ -129,6 +129,11 @@ export default function Navbar() {
                                                 <span className="nav-link-title"> Blank </span>
                                             </Link>
                                         </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/test-api">
+                                                <span className="nav-link-title"> API </span>
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div className="col col-md-auto">
