@@ -1,4 +1,5 @@
-import { IconHome, IconMoon, IconQuestionMark, IconSettings, IconSun } from "@tabler/icons-react";
+import { IconHome, IconMoon, IconSettings, IconSun } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
@@ -111,59 +112,22 @@ export default function Navbar() {
                                 <div className="col">
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
-                                            <a className="nav-link" href="./">
+                                            <Link className="nav-link" to="/">
                                                 <span className="nav-link-icon d-md-none d-lg-inline-block">
                                                     <IconHome stroke={1.5} />
                                                 </span>
                                                 <span className="nav-link-title"> Home </span>
-                                            </a>
+                                            </Link>
                                         </li>
-                                        <li className="nav-item dropdown">
-                                            <a
-                                                className="nav-link dropdown-toggle"
-                                                href="#navbar-help"
-                                                data-bs-toggle="dropdown"
-                                                data-bs-auto-close="outside"
-                                                role="button"
-                                                aria-expanded="false"
-                                            >
-                                                <span className="nav-link-icon d-md-none d-lg-inline-block">
-                                                    <IconQuestionMark stroke={1.5} />
-                                                </span>
-                                                <span className="nav-link-title"> Help </span>
-                                            </a>
-                                            <div className="dropdown-menu">
-                                                <a
-                                                    className="dropdown-item"
-                                                    href="https://tabler.io/docs"
-                                                    target="_blank"
-                                                    rel="noopener"
-                                                >
-                                                    {" "}
-                                                    Documentation{" "}
-                                                </a>
-                                                <a className="dropdown-item" href="./changelog.html">
-                                                    {" "}
-                                                    Changelog{" "}
-                                                </a>
-                                                <a
-                                                    className="dropdown-item"
-                                                    href="https://github.com/tabler/tabler"
-                                                    target="_blank"
-                                                    rel="noopener"
-                                                >
-                                                    {" "}
-                                                    Source code{" "}
-                                                </a>
-                                                <a
-                                                    className="dropdown-item text-pink"
-                                                    href="https://github.com/sponsors/codecalm"
-                                                    target="_blank"
-                                                    rel="noopener"
-                                                >
-                                                    Sponsor project!
-                                                </a>
-                                            </div>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/about">
+                                                <span className="nav-link-title"> About </span>
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/blank">
+                                                <span className="nav-link-title"> Blank </span>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

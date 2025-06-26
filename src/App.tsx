@@ -4,8 +4,7 @@ import '@tabler/core/dist/js/tabler.min.js'
 import Footer from "@/layouts/Footer";
 import Navbar from "@/layouts/Navbar";
 import Setting from "@/layouts/Setting";
-
-import AppRouter from './AppRouter';
+import AppRoutes from './AppRoutes';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <div className="page">
         <Navbar />
         <div className="page-wrapper">
-          <AppRouter />
+          <AppRoutes />
           <Footer />
         </div>
       </div>
